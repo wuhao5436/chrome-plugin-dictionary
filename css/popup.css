@@ -1,0 +1,28 @@
+#container {
+  width: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.line {
+  margin-bottom: 3px;
+}
+
+.line .text {
+  color: black;
+}
+
+.line .time {
+  color: #cccccc;
+  margin-left: 5px;
+}
+
+.line .del {
+  color: darkred;
+  margin-left: 5px;
+}
+
+.line .top {
+  color: dodgerblue;
+  margin-left: 5px;
+}

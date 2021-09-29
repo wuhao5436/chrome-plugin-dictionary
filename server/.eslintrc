@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    /** 关闭 use strict 的书写要求 */
+    "strict":"off"
+  }
+}
