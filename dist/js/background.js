@@ -29,6 +29,16 @@ chrome.contextMenus.create({
       redirect: 'follow', // manual, *follow, error
       referrer: 'no-referrer', // *client, no-referrer
     }).then(response => response.json()) // parses response to JSON
-  }
+  } 
 });
+
+
+
+function test()
+{
+  // window.dataSource.setData();
+	// // alert(JSON.stringify(window.dataSource.getData()));
+  // alert(window.aa)
+  alert('123')
+}
 

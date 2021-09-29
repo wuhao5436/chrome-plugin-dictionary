@@ -1,7 +1,6 @@
 import React, { ReactElement, useState, useEffect } from 'react'
 import { RightOutlined, DownOutlined,  UpOutlined} from '@ant-design/icons';
 import classnames from 'classnames';
-import { getWordsList } from '../apis/dictionary';
 
 
 interface Props {
@@ -28,12 +27,14 @@ export default function Content({}: Props): ReactElement {
 
     //初始化数据
     useEffect(() => {
-       const init = async function () {
-          const res =  await getWordsList({});
-          const { data } = res;
-          setWords(data);
-       }
-      init()
+    const init = async function () {
+        const bgWindow = chrome?.extension?.getBackgroundPage();
+        if (bgWindow) {
+           const data = bgWindow.dataSource.getData();
+           setWords(data);
+        }
+    }
+    init();
     }, [])
 
 
