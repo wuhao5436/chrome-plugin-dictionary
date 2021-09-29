@@ -19,8 +19,13 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        default:'./index.html',
+        background:'./background.html',
+        popup: './popup.html',
+      },
       output: {
-        dir: resolve(__dirname, '../'),
+        dir: resolve(__dirname, '../dist'),
       }
     }
   }
